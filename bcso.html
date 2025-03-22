@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Title & Favicon -->
+    <title>Nextside - Politiet</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="bcso.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="" height="100"></a>
+        </div>
+        <button type="button" class="btn-hamburger" data-action="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">Om us</a></li>
+            <li class="nav-item"><a href="regler.html">Regler</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" data-action="dropdown-toggle">Politi</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="bcso.html" class="current">Politi</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="Staff.html" target="_self">Staff Team</a></li>
+            <li class="nav-item"><a href="https://discord.gg/rW59UaJdy2" target="_blank">Discord</a></li>
+            <li class="nav-item"><a href="ansøgninger.html" target="_blank">ansøgninger</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="jumbotron text-center">
+            <div class="background-cover">
+                <h1 class="display-2">Politiet</h1>
+                <img class="lead_image" src="img/Politiet.png" alt="" height="350" width="650">
+                <h2>Om Politiet</h2>
+                <p class="lead"><strong>Politiet er forpligtet til at beskytte liv, ejendom
+                    og alle menneskers rettigheder til at opretholde orden og håndhæve loven i Blaine County og
+                    I udlandet. Politiet værdier er dets principper og overbevisninger, som vejleder
+                    kontorets medlemmer, når de forfølger kontorets mission. Den underliggende forudsætning for Blaine
+                    County Sheriff's Office er, at betjente skal dedikere sig til at behandle mennesker med respekt,
+                    retfærdighed og medfølelse.
+                </p>
+                <h3>Ansøg til Politiet i dag!</h3>
+                <p class="apply"></p>
+                <div class="container">
+                    <a href="https://docs.google.com/forms/d/1DCv0qoiQ3mi0Y-CmdZAIgQ1QTnvWcIsGVEdGFQlXWks/edit" target="_blank"><button class="btn"><span>ansøg Nu</span></button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

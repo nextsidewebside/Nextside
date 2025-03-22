@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Title & Favicon -->
+    <title>Nextside | Homepage</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="" height="100"></a>
+        </div>
+        <button type="button" class="btn-hamburger" data-action="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="current">Home</a></li>
+            <li class="nav-item"><a href="about.html">Om us</a></li>
+            <li class="nav-item"><a href="regler.html">regler</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" data-action="dropdown-toggle">Politi</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="bcso.html">Politiet</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="Staff.html" target="_self">Staff Team</a></li>
+            <li class="nav-item"><a href="https://discord.com/invite/x9cGJkYvWY" target="_blank">Discord</a></li>
+            <li class="nav-item"><a href="ansøgninger.html" target="_blank">ansøgninger</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="jumbotron text-center">
+            <h1 class="display-1">Nextside</h1>
+            <p class="lead"><strong>Den næste generation af Roleplay.</p>
+
+            <a href="https://discord.com/invite/x9cGJkYvWY" target="_blank">
+                <div class="button button-4">Join vores Discord</div>
+            </a>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

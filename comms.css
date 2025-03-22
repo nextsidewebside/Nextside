@@ -1,0 +1,124 @@
+body {
+    background-image: url("https://media.rockstargames.com/rockstargames/img/global/news/upload/pcvinewood_full.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #525252;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  h1 {
+    font-weight: 700 !important;
+    font-size: 50px !important;
+  }
+  h2 {
+    font-size: 40px !important;
+  }
+  h3 {
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+  }
+  .apply {
+    color: white;
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .lead_image {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .background-cover {
+    background-color: #3e3e3ee1;
+    padding: 30px;
+  }
+  .jumbotron {
+    background: none !important;
+    color: #5c9a63;
+    margin: auto;
+    width: 90%;
+    margin-top: 100px;
+  }
+  .lead {
+    color: #fff;
+    font-size: 25px !important;
+    width: 95%;
+    margin: auto;
+    width: 70%;
+  
+    padding: 10px;
+    text-align: center;
+  }
+  .btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #525252;
+    padding: 20px 80px;
+    margin: 10px auto;
+  }
+  
+  .btn span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #5c9a63;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      background: none !important;
+      color: ##5c9a63;
+      margin: auto;
+      width: 100%;
+      margin-top: 80px;
+    }
+    .jumbotron h1 {
+      font-size: 40px;
+    }
+    .lead {
+      font-size: 18px !important;
+      width: 100%;
+    }
+    .apply {
+      width: 100%;
+    }
+    .background-cover {
+      background-color: #353535b6;
+      padding: 22px;
+    }
+    .lead_image {
+      height: 250px;
+      width: 400px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+  

@@ -1,0 +1,60 @@
+body {
+  background-image: url("https://media.rockstargames.com/rockstargames/img/global/news/upload/pcvinewood_full.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #525252;
+  font-family: "Josefin Sans", sans-serif;
+}
+h1 {
+  font-weight: 700 !important;
+}
+
+.background-cover {
+  background-color: #353535b6;
+  padding: 30px;
+}
+.jumbotron {
+  background: none !important;
+  color: #ff04de;
+  margin: auto;
+  width: 70%;
+  margin-top: 100px;
+}
+.lead {
+  color: #fff;
+  font-size: 30px !important;
+}
+.icon {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.fa-discord {
+  color:#ff04de;
+}
+.fa-discord:hover {
+  transition: ease 0.5s;
+  transform: translateY(-8px);
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    background: none !important;
+    color: #ff0407;
+    margin: auto;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+  .lead {
+    font-size: 18px !important;
+  }
+  .background-cover {
+    background-color: #353535b6;
+    padding: 22px;
+  }
+}

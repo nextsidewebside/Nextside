@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Title & Favicon -->
+    <title>Nextside - regler</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="bcso.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+           <a href="index.html"><img src="img/logo.png" alt="" height="100"></a>
+        </div>
+        <button type="button" class="btn-hamburger" data-action="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="current">Home</a></li>
+            <li class="nav-item"><a href="about.html">Om us</a></li>
+            <li class="nav-item"><a href="regler.html">regler</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" data-action="dropdown-toggle">Politi</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="bcso.html">Politiet</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="Staff.html" target="_self">Staff Team</a></li>
+            <li class="nav-item"><a href="https://discord.com/invite/x9cGJkYvWY" target="_blank">Discord</a></li>
+            <li class="nav-item"><a href="ansøgninger.html" target="_self">ansøgninger</a></li>
+        </ul>
+    </nav>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rules Selection</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: url('https://media.rockstargames.com/rockstargames/img/global/news/upload/pcvinewood_full.jpg') no-repeat center center/cover;
+                background-attachment: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                color: #fff;
+                text-align: left;
+                flex-direction: column;
+                padding: 20px;
+            }
+    
+            .container {
+                background: rgba(0, 0, 0, 0.85);
+                padding: 40px;
+                border-radius: 16px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+                max-width: 850px;
+                width: 90%;
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+    
+            h1 {
+                color: #ff00ff;
+                font-size: 3.2em;
+                margin-bottom: 20px;
+                text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+            }
+    
+            h2 {
+                font-size: 1.6em;
+                margin-bottom: 30px;
+                color: #e6e6e6;
+            }
+    
+            .button-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 20px;
+            }
+    
+            .button {
+                background: linear-gradient(135deg, rgba(255, 0, 255, 0.5), rgba(255, 255, 255, 0.2));
+                border: none;
+                padding: 18px;
+                border-radius: 12px;
+                cursor: pointer;
+                font-size: 1.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+                color: white;
+                box-shadow: 0 4px 12px rgba(255, 0, 255, 0.5);
+            }
+    
+            .button:hover {
+                background: #ff00ff;
+                color: #fff;
+                transform: scale(1.1);
+                box-shadow: 0 6px 15px rgba(255, 0, 255, 0.8);
+            }
+    
+            .rules-container {
+                display: none;
+                margin-top: 30px;
+                text-align: left;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+                max-height: 450px;
+                overflow-y: auto;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+    
+            .rules-container h3 {
+                font-size: 2.2em;
+                margin-bottom: 15px;
+                color: #ff00ff;
+                text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+            }
+    
+            .rules-container ul {
+                list-style-type: square;
+                margin-left: 20px;
+            }
+    
+            .rules-container li {
+                margin: 12px 0;
+                font-size: 1.2em;
+                line-height: 1.7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Regler</h1>
+            <h2>Select a Category:</h2>
+            <div class="button-container" id="buttons"></div>
+            <div id="rules-container" class="rules-container">
+                <div id="rules-list"></div>
+            </div>
+        </div>
+    
+        <script>
+            const rulesData = {
+                "GENERELLE RP REGLER": ["1.1 Metagaming er streng forbudt. Dvs. der ikke må benyttes nogle former for eksterne kommunikationsmidler til at føre RP in-game. Dette indeholder bla. Discord, TeamSpeak, Twitch-streams", "1.2 NewLifeRule (NLR) skal altid overholdes i forbindelse med døden af din karakter. - Dvs. at bliver din karakter slået bevidstløs, har din karakter ingen opfattelse af årsagen til det eller de hændelser der måtte have ledt op til dette.", "1.3 FearRP princippet følges altid under din spilletid. Dvs. at din karakter bør respektere sit eget liv, og derfor såvidt muligt altid vil forsøge at overleve fremfor at ende i død. - Dvs. at du eksempelvis ikke trækker håndvåben på andre der i forvejen truer dig med dette, eftersom det højst sandsynligt ville føre til din karakters død. - Denne regel grænser bredt, og er ikke kun forbeholdt dette eksempel. Ved meget slem grad af FearRP kan dette medfør et CK!", "1.4 Powergaming må aldrig udnyttes. Dette vil sige at du skal forsøge at holde din karakters adfærd realistisk, og ikke udnytte det faktum at det er et spil. Samtidig skal du give dine medspillere muligheder for at udvikle RP-scenarierne. Det vil sige at du må ikke bruge vandet til at flygte fra politiet!", "1.5 Combatlog Combatlogging er ikke tilladt, og RP skal derfor afsluttes inden aflogning. Efter et større RP scenarie, forventes det at man bliver de ekstra 15 min inde på serveren inden man logger af. - Opleves det at du gentagende forlader serveren under RP kan dette have konsekvenser.", "1.6 Copbait Ekstrem Copbaiting er ikke tilladt. Dette burde ikke skulle stå i regelsættet, men blot så jer, der ønsker reglen offentlig, så er den her. Dette gælder tydelige forsøg på, at få Politiets opmærksomhed, blot grundet kedsomhed, eller andet. Gentagende overtrædelser, vil resultere i udelukkelse.", "1.7 RDM - Random Deathmatch . For at undgå RDM på serveren skal spillerne altid have en gyldig grund til at angribe eller dræbe en anden spiller i spillet. Hvis en spiller overtræder RDM-reglen, kan de blive straffet med alt fra en advarsel til midlertidig eller permanent udelukkelse fra Evolution. Reglen er vigtig for at opretholde Evolution realistiske RP-scenarier og sikre, at alle spillere kan opleve en | Dette gælder også for NPC'er eller indbyggere NPCer skal betragtes som mennesker og behandles derefter.", "1.8 Dit køretøj er ikke et våben, og må ikke bruges som et. Hvis en spiller overtræder VDM-reglen, kan de blive straffet med alt fra en advarsel til midlertidig eller permanent udelukkelse fra serveren. Reglen er vigtig for at opretholde spillets realistiske elementer og sikre, at alle spillere kan nyde en fair-kamp. Dog er det ikke sådan, du ikke må ramme en anden person. Et eksempel er at du holdt til et trafikstop hvor din intention er at flygte - betjenten stiller sig foran din bil og vil ikke rykke uanset. Er det umuligt at komme forbi uden at køre ham ned, så det tilladt.", "1.9 Content kørsel er tilladt på severen. Det vil sige at det er tilladt at lave diverse hop under f.eks. en jagt med politiet. Politiet har dog også lov til at lave de samme hop som du gør. Bjergkørsel kræver stadig et offroad køretøj som er egnet til det.", "2.0 Det er ikke tilladt at genkende personer, der bærer masker eller på anden måde skjuler deres identitet. Hvis de 2 karakter har en meget lang RP historie sammen, kan man genkende stemmen som i at det er en fornemmelse du har.", "2.1 Scam er ikke tilladt uden virkelig godt grundlag og grundlaget skal kunne fremvises. Brud på denne regel medfører 1 uges ban.", "2.2 Det er vigtigt, at din karakter udvikler sig troværdigt og realistisk. En pludselig ændring i din karakters rolle, som at gå fra bandemedlem til politibetjent, vil ikke blive accepteret uden en ordentlig baggrundshistorie. Desuden er det ikke tilladt at være medlem af både en bande og politiet samtidig –vælg én ting. Brydes dette, er det måske en advarsel, fratages retten til whitelisted jobs, CK eller ban.", "2.3 Våben må kun bruges i situationer, hvor der er en realistisk og god grund. Dette betyder, at våben ikke kan anvendes uden grundlag. Overvej konsekvenserne – våbenbrug bør altid være den sidste udvej. Tænk jer nu om og bruge den sunde fornuft som alle besidder. Vi er en RP server og ikke en PVP server. Hvis det bliver opdaget du render rundt med våben uden et godt RP grundlag. Kan dette medfører op til 1 uges ban.", "2.4 Når du er i slåskamp eller div. er der ikke tilladt at bruge bandager. Hvis du ikke længere er i en aktiv slåskamp er det tilladt at bruge dem.", "2.5 Det er på ingen måde tilladt at lave Voldtægts RP! Lige gyldig om scenariet er aftalt eller ej. Hvis denne regl bliver brudt er det Perm ban uden mulighed for unban."],
+                "BANDE REGLER": ["1.1 Alle bander har en opstartsperiode på en uge. Det gør vi pga. hvis nu ikke viser jer at være aktive i jeres bande, lukker vi den. Det er vigtigt for os at i viser i er aktive i jeres bande. De bande ansvarlige forbeholder sig retten til at forlænge opstartesperiode.", "2.1 Alle bander vil kunne blive lukket uden varsel. Det kan være fordi at vi mener i ikke kan jeres RP, inaktivitet eller regelbrud. Det er altid op til den bandeansvarlige og bestemme, om det er det, der er nødvendigt * 3 strikes = Lukning af bande.", "3.1 Man skal mindst være 4 for at starte en bande. Man må maks være 15 i en bande, pusher tæller ikke med. Man må have så mange pusher som man ønsker. Pusher må under ingen omstændigheder aktivt deltage i banderelaterede ting. | Bliver dette ikke overholdt, vil det medfører en bande strike","Røveri eller tyveri fra andre spillere er tilladt, men der skal altid være et legitimt grundlag for det. Grundlaget skal fremvises. F.eks så opbevare værdifulde ting i huse eller lager. Hvis nu din bil er ulåst, er det ikke tilladt at stjæle fra den. Men man må ikke stjæle fra lager eller huse. Man må stjæle fra gidsler, men igen et godt grundlag!", "4.1 En anden bande har en fra jeres bande kidnappet. Men du vælger og være ligeglad. Banden, der har gidslet, må fremover gerne CK gidslet. CK`et gør at gidslet modtager 3 dages cooldown fra BandeRP. | Samt en bande strike til banden der er ligeglad.", "5.1 Bandeboss eller præsident er det øverste medlem i banden. Skifter din bandeboss eller præsident undervejs, skal dette godkendes først af bande-ansvarlige. Skiftes det uden godkendelse, uddeles strikes eller i værste tilfælde nedlægning. | 5.2 Underbossen eller vice præsident er bandebossens højre hånd. Man kan kun have 1 underboss eller vice præsident, ved brud på denne regel kan strikes/nedlægning forekomme.", "6.1 Rute Det er tilladt og eje en rute. Man må gerne have alliancer med andre bander om ruten. Det vil sige 2 mark, 2 omdanner og 1 lab. Man må sælge ruten men til overkommelige og realistiske priser. | 6.2 Alliancer Man må gerne have alliancer. Man må have alliancer på hinandens ruter og zoner. Man må gerne hjælpe sine allierede i konflikt MEN i krig skal det godkendes af en bande ansvarlig. Hjælper man i krig uden tilladelse, uddeles strikes eller i værste tilfælde nedlukning. | 6.3 Krig Vil du i krig mod en bande, skal det godkendes af en bande ansvarlig. Herunder skal krav og grundlaget kunne fremvises . Reglerne for krigen bliver aftalt med begge parter, under forhandling med bande ansvarlige. | 6.4 Krav på marker Lidt ligesom med zonerne, skal du bede folk om at forlade marken eller betale (maks 50.000 per døgn). Sker det flere gange, må du loote personen.", "7.1 Hvis du forlader en bande har du 7 dags cooldown fra bande RP. Overholdes dette ikke, medfører det 7 dages ban. | 7.2 Hvis banden lukker enten af bandeledelsen eller bandeansvarlige, er der 3 dages cooldown fra bande RP. Bliver dette ikke overholdt kan det medfører op til 7 dages ban", "8.1 Administrator På alle banders discord, skal bande ansvarlige have administrator, så alt er synligt. Der må ikke laves “pusher discords”, så det skal være inde under jeres bande discord. Holder i ting hemmeligt derinde lukkes banden uden varsel. | 8.2 Meta Gaming Ingen meta gaming på jeres bande discord. Er man ingame, må man ikke sidde i et discord opkald, dette vil blive betragtet som meta gaming. Det er op til den bande ansvarlige og bestemme straffen for overtrædelsen.", "Der er en konflikt trappe der skal følges imellem banderne. 1. Banderne skal have holdt min. 2 møder omkring evt. marker eller problemet 2. Forhandlinger og kidnapninger (Med slagvåben) 3. Konflikt med brug af slagvåben 4. Konflikt med skydevåben. Hvert enkelte trin skal aftales med den anden bande. Inden at der rykkes op i trin.",],
+                "OOC": ["[?] - Alle former for henvendelser skal foregå ved at spilleren laver en ticket, og forklarer problemet man har i ticketen. - Dvs. det ikke er tilladt at kontakte Staff privat, uden tydelig skriftlig/mundtlig accept forinden. [?] - Den in-game OOC/OOL-chat (Out of Character/Local) skal udelukkende bruges til, at skrive nødvendige rp relevante ting i. Bruges IKKE til at ytre sin mening i, stille spørgsmål eller skrive ligegyldige ting som 'haha' og 'okay' osv. Ved spørgsmål og hjælp henvises der til support på discord.", "Brug af crosshair er tilladt på severen. Dog er det ikke tilladt at bruge diverse pvp pakker som giver dig en fordel ingame. Bliver dette opdaget kan det medfører til advarsel eller værste tilfælde udlukning af severen.", "Anvendelse af tredjepartsprogrammer som modmenuer, tracers, flawless widescreen eller blood effect-programmer vil resultere i permanent udelukkelse fra Nextside.", "Hvis der opdages bugs eller glitches, skal disse hurtigst muligt rapporteres til en staff gennem en ticket/report bug. Udnyttelse af dette, uanset omstændighederne, vil føre til udelukkelse af spilleren fra serveren.", "Mobning, racisme og andre former for personlige angreb er strengt forbudt og vil føre til permanent udelukkelse. Sjov og leg er tilladt, så længe det ikke overskrider andres personlige grænser. Det er forbudt at omtale familiemedlemmer (som forældre, søskende osv.), da det betragtes som en personlig grænse og det kan føre til en udelukkelse.", "Er du i tvivl om det du ønsker at lave er i mod vores regler? Så kontakt vores dygtige staff team. Enten over afventer support, eller i gennem en ticket.",],
+                "CK/PK": ["Player Kill. Hvis du har deltaget i et RP-scenarie, hvor modparten vælger at PK dig, så glemmer du alt om personen og situationen eller bestemte ting som din karakter har oplevet. Dette skal godkendes af staff teamet igennem en CK ticket. Eller gennem en PK ansøgning.", "Character Kill er et CK, som gør at karakteren bliver slettet. Der er flere forskellige krav der skal opfyldes for et CK. Disse krav skal udfyldes ved ansøgning om CK. Denne ansøgning skal godkendes af en CK ansvarlig.", "Hvis du bryder din FearRP i en meget stor grad kan det fører til et CK af din karakter, dette er op til den support ansvarlige at tage vurdering om der skal indkaldes en CK ansvarlig for at vurdere sagen. | Hvis du påbegynder selvmords RP og hopper ud over en bro, tag eller fra andet højt sted. Fører dette også til et CK. | Hvis du påbegynder selvmords rp og du ved en fejl kommer til at hoppe ud over er dette stadig et CK. Hvis du kun ønsker at true med selvmord skal du tænke dig om. | Hvis du vælger at gennemfører selvmords rp skal du kontakte support efter scenariet og fortælle din karakter skal CK's. Hvis dette ikke bliver overholdt vil det medfører CK og advarsel og i værste tilfælde udelukkelse af serveren."],
+                "GREEN ZONES": ["Green zones og opholdssteder regler | Pillbox (Hospitalet) | Alle politistationer | Gælder også alle firmaer | Mekanikerne | Bilforhandler | Midtby | Green zone er et sted hvor KonfliktrappendeRP og skyderi ikke er tilladt. Green zones fungerer dog hellere ikke som en slags “helle” i en jagt.",],
+                "WHITELISTED JOB": ["Rule 1: Follow job-specific rules", "Rule 2: Roleplay your job seriously"],
+                "RØVERI REGLER": ["Rule 1: No random robberies", "Rule 2: Proper roleplay required"],
+                "TOS": ["Rule 1: Follow the server's Terms of Service", "Rule 2: No cheating or exploiting"],
+                "FIRMA REGLER": ["Rule 1: Follow business regulations", "Rule 2: No corruption or scamming"]
+            };
+    
+            const buttonContainer = document.getElementById("buttons");
+            const rulesContainer = document.getElementById("rules-container");
+            const rulesList = document.getElementById("rules-list");
+    
+            function showRules(category) {
+                rulesList.innerHTML = `<h3>${category}</h3><ul>` + rulesData[category].map(rule => `<li>${rule}</li>`).join("") + `</ul>`;
+                rulesContainer.style.display = "block";
+                rulesContainer.scrollIntoView({ behavior: "smooth" });
+            }
+    
+            Object.keys(rulesData).forEach(category => {
+                const button = document.createElement("div");
+                button.classList.add("button");
+                button.textContent = category;
+                button.onclick = () => showRules(category);
+                buttonContainer.appendChild(button);
+            });
+        </script>
+    </body>
+    </html>
+
+    
